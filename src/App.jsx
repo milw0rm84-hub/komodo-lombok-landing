@@ -119,8 +119,80 @@ function App() {
   return (
     <div ref={mainRef} className="bg-[#042D20] text-white selection:bg-[#C19B6E] selection:text-[#042D20] overflow-x-hidden min-h-screen">
       <Helmet>
-        <title>Komodo Lombok Trip | Luxury Private Charters | Lombok Perfect</title>
-      </Helmet>
+  {/* --- 1. SEO DASAR --- */}
+  <title>Lombok Perfect | Luxury Private Charters & Komodo Expeditions</title>
+  <meta name="description" content="Eksplorasi kemewahan tanpa batas dari Lombok ke Komodo. Spesialis sewa kapal Phinisi pribadi dengan layanan bintang lima dan pengalaman maritime atelier." />
+  <meta name="keywords" content="Lombok to Komodo trip, luxury boat charter Indonesia, private phinisi Komodo, sewa kapal mewah Lombok, paket wisata Komodo premium" />
+  <meta name="author" content="Lombok Perfect" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lombokperfect.com" />
+
+  {/* --- 2. OPEN GRAPH (Facebook, Instagram, WhatsApp) --- */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lombokperfect.com" />
+  <meta property="og:title" content="Lombok Perfect | The Pinnacle of Private Sea Expeditions" />
+  <meta property="og:description" content="Privasi adalah kemewahan tertinggi. Temukan keajaiban Taman Nasional Komodo dengan armada eksklusif kami." />
+  {/* Gunakan gambar beresolusi 1200x630px yang menonjolkan kemewahan kapal */}
+  <meta property="og:image" content="https://lombokperfect.com/assets/images/og-luxury-phinisi.jpg" />
+  <meta property="og:image:alt" content="Luxury Phinisi Boat by Lombok Perfect sailing in Komodo National Park" />
+  <meta property="og:site_name" content="Lombok Perfect" />
+  <meta property="og:locale" content="id_ID" />
+
+  {/* --- 3. TWITTER / X CARDS --- */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lombokperfect" />
+  <meta name="twitter:title" content="Lombok Perfect | Luxury Private Charters" />
+  <meta name="twitter:description" content="Bespoke nautical experiences in the heart of the Indonesian archipelago." />
+  <meta name="twitter:image" content="https://lombokperfect.com/assets/images/og-luxury-phinisi.jpg" />
+
+  {/* --- 4. TIKTOK & MOBILE OPTIMIZATION --- */}
+  <meta name="theme-color" content="#042D20" /> {/* Warna hijau gelap brand Anda */}
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  {/* --- 5. SCHEMA.ORG (JSON-LD) - Sangat Penting untuk Google --- */}
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Lombok Perfect",
+        "alternateName": "Lombok Perfect Expeditions",
+        "description": "Premium luxury expeditions and private boat charters from Lombok to Komodo.",
+        "url": "https://lombokperfect.com",
+        "logo": "https://lombokperfect.com/assets/images/logo-gold.png",
+        "image": "https://lombokperfect.com/assets/images/hero-luxury.jpg",
+        "priceRange": "$$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Raya Senggigi No.88",
+          "addressLocality": "Mataram",
+          "addressRegion": "NTB",
+          "postalCode": "83355",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -8.508,
+          "longitude": 116.050
+        },
+        "telephone": "+628123456789",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+628123456789",
+          "contactType": "Customer Service",
+          "areaServed": "ID",
+          "availableLanguage": ["English", "Indonesian"]
+        },
+        "sameAs": [
+          "https://instagram.com/lombokperfect",
+          "https://facebook.com/lombokperfect",
+          "https://tiktok.com/@lombokperfect"
+        ]
+      }
+    `}
+  </script>
+</Helmet>
 
       {/* --- PRELOADER --- */}
       <div ref={preloaderRef} className="fixed inset-0 z-[200] bg-[#021811] flex flex-col items-center justify-center overflow-hidden">
