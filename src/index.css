@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold-primary: #C19B6E;
+}
+
+body {
+  background-color: #042D20;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom Swiper Dots */
+.premium-swiper .swiper-pagination-bullet {
+  background: rgba(193, 155, 110, 0.2);
+  opacity: 1;
+}
+
+.premium-swiper .swiper-pagination-bullet-active {
+  background: var(--gold-primary);
+  box-shadow: 0 0 10px rgba(193, 155, 110, 0.5);
+}
+
+/* Smooth Navigation Underline */
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--gold-primary);
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}

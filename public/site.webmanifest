@@ -1,0 +1,19 @@
+{
+    "name": "Lombok Perfect Expeditions",
+    "short_name": "LP Expeditions",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#042D20",
+    "background_color": "#042D20",
+    "display": "standalone"
+}
