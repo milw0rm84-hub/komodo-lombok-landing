@@ -35,3 +35,20 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
+:root {
+  /* Palet Luxury Gold & Deep Charcoal */
+  --gold-primary: #C19B6E;
+  --gold-light: #e6ccab;
+  --dark-bg: #0b0c0d; 
+  --dark-accent: #16181a;
+  --text-gray: #9ca3af;
+  
+  /* Tipografi Luxury */
+  --font-main: 'Inter', sans-serif;
+  --font-accent: 'Cinzel', serif; /* Font klasik untuk judul */
+}
+
+/* Utilitas Kelas Emas agar konsisten */
+.gold-text { color: var(--gold-primary); }
+.gold-bg { background-color: var(--gold-primary); }
+.font-luxury { font-family: var(--font-accent); }
