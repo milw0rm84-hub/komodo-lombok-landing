@@ -201,8 +201,6 @@ function App() {
      
     >
       <source src="src/assets/video/nav-desktop.mp4" type="video/mp4" />
-	  <source src="src/assets/video/nav-desktop.webm" type="video/webm" />
-
     </video>
 
     {/* Video Mobile - Menghilangkan grayscale dan menaikkan opacity */}
@@ -215,8 +213,6 @@ function App() {
      
     >
       <source src="src/assets/video/nav-mobile.mp4" type="video/mp4" />
-	  <source src="src/assets/video/nav-mobile.webm" type="video/webm" />
-
     </video>
     
     {/* OPSIONAL: Hapus atau kecilkan opacity div ini jika teks masih terlihat kurang jelas */}
