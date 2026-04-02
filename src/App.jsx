@@ -110,14 +110,72 @@ function App() {
   return (
     <div ref={mainRef} className="bg-[#042D20] text-white selection:bg-[#C19B6E] selection:text-[#042D20] overflow-x-hidden min-h-screen">
       <Helmet>
-<title>Komodo Lombok Trip | Luxury Sailing & Cultural Tours</title>
+  {/* --- BASIC SEO --- */}
+  <title>Komodo Lombok Trip | Luxury Sailing & Private Expeditions</title>
+  <meta name="description" content="Eksplorasi kemewahan dari Lombok ke Komodo. Paket tour privat, ekspedisi hiu paus di Sumbawa, dan sailing boat mewah dengan standar pelayanan kelas dunia." />
+  <meta name="keywords" content="Komodo tour, Lombok trip, luxury sailing Indonesia, whale shark tour sumbawa, private boat charter Komodo, Kanawa island, Bedil island" />
+  <link rel="canonical" href="https://www.komodolomboktrip.com" />
 
-  
-  {/* Open Graph untuk Sosial Media */}
+  {/* --- OPEN GRAPH (FACEBOOK, WHATSAPP, LINKEDIN) --- */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.komodolomboktrip.com" />
+  <meta property="og:title" content="Komodo Lombok Trip | Luxury Sailing & Private Expeditions" />
+  <meta property="og:description" content="Bespoke nautical experiences in the Komodo archipelago. Discover hidden lagoons and ancient dragons in absolute privacy." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format" />
 
-  
-  {/* Canonical Link (Penting agar tidak dianggap duplikat dari situs utama) */}
-  <link rel="canonical" href="https://komodolomboktrip.com" />
+  {/* --- TWITTER CARD --- */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.komodolomboktrip.com" />
+  <meta name="twitter:title" content="Komodo Lombok Trip | Luxury Expeditions" />
+  <meta name="twitter:description" content="Traditional Indonesian craftsmanship merging with modern engineering. Private charters curated for your inner circle." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format" />
+
+  {/* --- STRUCTURED DATA (JSON-LD) --- */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Komodo Lombok Trip",
+      "description": "Luxury sailing and private expeditions from Lombok to Komodo Archipelago. Specializing in whale shark tours and bespoke maritime experiences.",
+      "url": "https://www.komodolomboktrip.com/",
+      "telephone": "+6281999228777",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lombok",
+        "addressRegion": "West Nusa Tenggara",
+        "addressCountry": "ID"
+      },
+      "image": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format",
+      "priceRange": "$$$",
+      "sameAs": [
+        "https://instagram.com/lombokperfect",
+        "https://tiktok.com/@lombokperfect",
+        "https://facebook.com/lombok.perfect.2025/"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Luxury Expeditions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ultimate Komodo Experience",
+              "url": "https://lombokperfect.com/tour-detail.php?id=18"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Whale Shark Expedition Sumbawa",
+              "url": "https://whalesharktour.com"
+            }
+          }
+        ]
+      }
+    })}
+  </script>
 </Helmet>
 
       {/* --- PRELOADER --- */}
@@ -185,7 +243,7 @@ function App() {
           {navItems.map((item) => (
             <a key={item.id} href={`#${item.id}`} className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/70 hover:text-[#C19B6E] transition-all">{item.label}</a>
           ))}
-          <a href={waLink} target="_blank" rel="noreferrer" className="bg-[#C19B6E]/10 hover:bg-[#C19B6E] text-[#C19B6E] hover:text-[#042D20] border border-[#C19B6E]/20 px-8 py-3 text-[9px] tracking-[0.4em] uppercase font-bold transition-all rounded-full">Book Now</a>
+          <a href={waLink} target="_blank" rel="noopener noreferrer" className="bg-[#C19B6E]/10 hover:bg-[#C19B6E] text-[#C19B6E] hover:text-[#042D20] border border-[#C19B6E]/20 px-8 py-3 text-[9px] tracking-[0.4em] uppercase font-bold transition-all rounded-full">Book Now</a>
         </div>
       </nav>
 
@@ -215,7 +273,7 @@ function App() {
       {/* Use the mobile-specific variable here */}
       <source src={navVideoMobile} type="video/mp4" />
     </video>
-    
+    <h1 className="sr-only">Luxury Komodo Lombok Trip & Private Sailing Expeditions</h1>
   </div>
 </header>
  
@@ -372,7 +430,7 @@ function App() {
           <div className="md:col-span-3">
             <div className="bg-white/5 p-8 border border-white/10 rounded-sm">
               <h4 className="text-[#C19B6E] text-[9px] uppercase font-bold mb-4 italic">Concierge</h4>
-              <a href={waLink} target="_blank" rel="noreferrer" className="flex items-center justify-between group">
+              <a href={waLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group">
                 <span className="text-xl font-serif italic text-white">Start Chat</span>
                 <span className="w-8 h-8 bg-[#C19B6E] rounded-full flex items-center justify-center text-[#042D20] group-hover:scale-110 transition-transform duration-500">→</span>
               </a>

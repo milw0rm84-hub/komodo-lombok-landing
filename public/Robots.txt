@@ -1,6 +1,22 @@
+# https://www.komodolomboktrip.com/ robots.txt
+
 User-agent: *
 Allow: /
+Allow: /itinerary
+Allow: /experience
+Allow: /journal
+
+# Blokir akses ke folder sistem dan file konfigurasi
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /dist/
 Disallow: /private/
+Disallow: /api/
 Disallow: /admin/
 
-Sitemap: https://komodolomboktrip.com/sitemap.xml
+# Optimasi untuk bot gambar (Penting untuk visual travel Anda)
+User-agent: Googlebot-Image
+Allow: /
+
+# Lokasi Sitemap (Ganti dengan URL sitemap Anda yang sudah ada)
+Sitemap: https://www.komodolomboktrip.com/sitemap.xml
