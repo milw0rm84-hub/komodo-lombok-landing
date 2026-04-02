@@ -52,3 +52,16 @@ nav a:hover::after {
 .gold-text { color: var(--gold-primary); }
 .gold-bg { background-color: var(--gold-primary); }
 .font-luxury { font-family: var(--font-accent); }
+
+/* Force hide desktop and show mobile on screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .desktop-video-class {
+    display: none !important;
+  }
+  .mobile-video-class {
+    display: block !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    object-fit: cover !important;
+  }
+}

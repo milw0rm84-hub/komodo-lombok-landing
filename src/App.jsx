@@ -190,37 +190,31 @@ function App() {
       </nav>
 
       {/* --- HERO WITH VIDEO --- */}
-<header className="relative h-[100vh] w-full flex items-center px-6 md:px-24 overflow-hidden border-b border-[#C19B6E]/10 bg-black">
+<header className="relative h-[100vh] flex items-center px-6 md:px-24 overflow-hidden border-b border-[#C19B6E]/10">
   <div className="absolute inset-0 z-0">
     
-    {/* Desktop Video: Manual Path */}
+    {/* Video Desktop - Hidden on mobile (below 768px) */}
     <video 
       autoPlay 
       muted 
       loop 
       playsInline 
-      key="desktop-video"
-      className="hidden md:block w-full h-full object-cover"
+      className="hidden md:block w-full h-full object-cover opacity-100"
     >
-      <source src="/src/assets/video/nav-desktop.mp4" type="video/mp4" />
+      <source src={navVideo} type="video/mp4" />
     </video>
 
-    {/* Mobile Video: Manual Path */}
+    {/* Video Mobile - Visible only on mobile, hidden on md screens and up */}
     <video 
       autoPlay 
       muted 
       loop 
       playsInline 
-      key="mobile-video"
-      className="block md:hidden w-full h-full object-cover"
+      className="block md:hidden w-full h-full object-cover opacity-100"
     >
-      <source src="/src/assets/video/nav-mobile.mp4" type="video/mp4" />
+      {/* Use the mobile-specific variable here */}
+      <source src={navVideoMobile} type="video/mp4" />
     </video>
-
-    <div className="absolute inset-0 bg-black/20 z-10"></div>
-  </div>
-
-  <div className="relative z-20 text-white">
     
   </div>
 </header>
