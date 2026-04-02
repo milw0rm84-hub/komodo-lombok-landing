@@ -1,4 +1,4 @@
-
+import navVideo from '../src/assets/video/nav-desktop.mp4';
 
 
 
@@ -193,26 +193,26 @@ function App() {
   <div className="absolute inset-0 z-0">
     {/* Video Desktop - Menghilangkan grayscale dan menaikkan opacity */}
     <video 
-      autoPlay 
+      autoPlay
       muted 
       loop 
       playsInline 
       className="hidden md:block w-full h-full object-cover opacity-100" 
      
     >
-      <source src="src/assets/video/nav-desktop.mp4" type="video/mp4" />
+      <source src={navVideo} type="video/mp4" />
     </video>
 
     {/* Video Mobile - Menghilangkan grayscale dan menaikkan opacity */}
     <video 
-      autoPlay 
+      autoPlay
       muted 
       loop 
       playsInline 
       className="block md:hidden w-full h-full object-cover opacity-100"
      
     >
-      <source src="src/assets/video/nav-mobile.mp4" type="video/mp4" />
+      <source src={navVideo} type="video/mp4" />
     </video>
     
     {/* OPSIONAL: Hapus atau kecilkan opacity div ini jika teks masih terlihat kurang jelas */}
