@@ -1,5 +1,6 @@
-import navVideo from '../src/assets/video/nav-desktop.mp4';
 
+import navVideo from '../src/assets/video/nav-desktop.mp4';
+import navVideoMobile from '../src/assets/video/nav-mobile.mp4';
 
 
 
@@ -189,38 +190,41 @@ function App() {
       </nav>
 
       {/* --- HERO WITH VIDEO --- */}
-<header className="relative h-[100vh] flex items-center px-6 md:px-24 overflow-hidden border-b border-[#C19B6E]/10">
+<header className="relative h-[100vh] w-full flex items-center px-6 md:px-24 overflow-hidden border-b border-[#C19B6E]/10 bg-black">
   <div className="absolute inset-0 z-0">
-    {/* Video Desktop - Menghilangkan grayscale dan menaikkan opacity */}
+    
+    {/* Desktop Video: Manual Path */}
     <video 
-      autoPlay
+      autoPlay 
       muted 
       loop 
       playsInline 
-      className="hidden md:block w-full h-full object-cover opacity-100" 
-     
+      key="desktop-video"
+      className="hidden md:block w-full h-full object-cover"
     >
-      <source src={navVideo} type="video/mp4" />
+      <source src="/src/assets/video/nav-desktop.mp4" type="video/mp4" />
     </video>
 
-    {/* Video Mobile - Menghilangkan grayscale dan menaikkan opacity */}
+    {/* Mobile Video: Manual Path */}
     <video 
-      autoPlay
+      autoPlay 
       muted 
       loop 
       playsInline 
-      className="block md:hidden w-full h-full object-cover opacity-100"
-     
+      key="mobile-video"
+      className="block md:hidden w-full h-full object-cover"
     >
-      <source src={navVideo} type="video/mp4" />
+      <source src="/src/assets/video/nav-mobile.mp4" type="video/mp4" />
     </video>
-    
-    {/* OPSIONAL: Hapus atau kecilkan opacity div ini jika teks masih terlihat kurang jelas */}
-    {/* <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40"></div> */}
+
+    <div className="absolute inset-0 bg-black/20 z-10"></div>
   </div>
 
-  
+  <div className="relative z-20 text-white">
+    
+  </div>
 </header>
+ 
 
       {/* --- FEATURED EXPEDITIONS --- */}
       <section className="py-24 bg-[#042D20] text-white overflow-hidden border-b border-[#C19B6E]/10">
@@ -251,7 +255,7 @@ function App() {
               <div className="p-8 md:p-10">
                 <h3 className="font-serif italic text-2xl text-[#C19B6E] uppercase mb-3">Whale Shark Expedition</h3>
                 <p className="text-gray-400 text-sm mb-8 italic leading-relaxed">A rare encounter with the giants of Sumbawa. Bespoke itineraries for elite travelers.</p>
-                <a href="https://whalesharktour.com" className="inline-block border border-[#C19B6E]/30 text-[#C19B6E] px-8 py-3 text-[9px] uppercase tracking-widest font-bold hover:bg-[#C19B6E] hover:text-[#042D20] rounded-full transition-all duration-500">View on Lombok Perfect</a>
+                <a href="https://whalesharktour.com" className="inline-block border border-[#C19B6E]/30 text-[#C19B6E] px-8 py-3 text-[9px] uppercase tracking-widest font-bold hover:bg-[#C19B6E] hover:text-[#042D20] rounded-full transition-all duration-500">View on Whale Shark Tour</a>
               </div>
             </div>
 
