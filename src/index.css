@@ -4,6 +4,12 @@
 
 :root {
   --gold-primary: #C19B6E;
+  --gold-light: #e6ccab;
+  --dark-bg: #0b0c0d; 
+  --dark-accent: #16181a;
+  --text-gray: #9ca3af;
+  --font-main: 'Inter', sans-serif;
+  --font-accent: 'Cinzel', serif;
 }
 
 body {
@@ -11,7 +17,6 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
-/* Custom Swiper Dots */
 .premium-swiper .swiper-pagination-bullet {
   background: rgba(193, 155, 110, 0.2);
   opacity: 1;
@@ -22,7 +27,6 @@ body {
   box-shadow: 0 0 10px rgba(193, 155, 110, 0.5);
 }
 
-/* Smooth Navigation Underline */
 nav a::after {
   content: '';
   display: block;
@@ -35,3 +39,7 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
+
+.gold-text { color: var(--gold-primary); }
+.gold-bg { background-color: var(--gold-primary); }
+.font-luxury { font-family: var(--font-accent); }

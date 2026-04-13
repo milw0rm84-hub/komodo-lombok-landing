@@ -5,6 +5,26 @@ import { fileURLToPath } from 'url';
 
 export default defineConfig({
   plugins: [react()],
+
+  server: {
+    headers: {
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1; mode=block',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://*.google.com https://*.googleapis.com https://*.ggpht.com; frame-src https://www.google.com https://www.google.com.br; connect-src 'self' https://wa.me https://web.whatsapp.com;",
+    },
+  },
+
+  preview: {
+    headers: {
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1; mode=block',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://*.google.com https://*.googleapis.com https://*.ggpht.com; frame-src https://www.google.com https://www.google.com.br; connect-src 'self' https://wa.me https://web.whatsapp.com;",
+    },
+  },
   
   resolve: {
     alias: {
